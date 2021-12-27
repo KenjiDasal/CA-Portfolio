@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/KDA.png">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+
+    <script src="https://kit.fontawesome.com/e4eb86f749.js" crossorigin="anonymous"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="/javascript/script.js"></script>
+    <script src="/javascript/navbar.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!---------- NAVBAR ---------->
+    <nav class="navbar">
+      <div class="max-width">
+        <a href="index.html">
+            <img src="images/KD.png" alt="" class="logo">
+        </a>
+      
+          <ul class="menu">
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Gallery</a>
+            </li>
+            <li>
+                <a href="#">Project</a>
+              </li>
+              <li>
+                <a href="#">Contacts</a>
+              </li>
+          </ul>
+
+          <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+          </div>
+          </div>
+    </nav>
+
+    <!---------- HOMEPAGE ---------->
+    <div class="home-ca">
+        <h1 class="max-width">
+            <div class="text1">Music Visualizer </div>
+            <div class="button"><a href="https://kenjidasal.github.io/CA_MusicVisualiser/index.html">Full Project</a></div>
+        </h1>
+      </div>
+  
+      <div class="home-ca-about">
+        <div class="max-width">
+          <h1>
+            ABOUT THE PROJECT
+          </h1>
+  
+          <p>
+            I started my assignment from researching ideas around web-based interactive art and design work, looking for inspiration for this really interesting task. 
+            At the beginning I was almost sure that I will create a simple game or an interactive Super Formula, however, I couldn’t find any right ideas, and I found online the audio visualization based on Edit Audios and Music Mixes with Visuals from YouTube. 
+            This was when I decided, that I want to create something in this area of art and music. <br> I started researching existing projects using various online pages. At this point, I wasn’t only looking for audio visualization example, but also for interesting shapes and Music Playlist that I could then implement into the project.
+            I found more interesting projects and shapes that brought my attention, but I believe the ones highlighted.
+            <br>
+            Below are the link to the ones which mostly influenced my final project.
+          </p>
+
+        <ul>
+            <li>
+                <a href="https://www.youtube.com/watch?v=Pn1g1wjxl_0&list=PLRqwX-V7Uu6aFcVjlDAkkGIixw70s7jpW">
+            -	Visualization Tutorial
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/watch?v=vgaoiTIBge0">
+            -	Visualizers and Bass Interaction
+                </a>
+            </li>
+            <li>
+                <a href="https://youtu.be/D9G1VOjN_84?t=169">
+            -	Images and Songs
+                </a>
+            </li>
+            <li>
+                <a href="https://tympanus.net/Development/AudioVisualizers/">
+            -	Multi Visualizers 
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/watch?v=gHpxRv4MBBA&t=134s">
+            -	What I want my project to be
+                </a>
+            </li>
+            
+        </ul>
+
+        <div class="newp">
+          <h1>
+            IMPLEMENTATION AND EVALUATION
+          </h1>
+  
+          <p>
+            Having the idea for the project in my head I decided to first familiarize myself and study with the concept of sound, in general, to better understand how amplitude and different frequencies of audio work.
+            Then to get to know the sound library of p5. Watching multiple videos from “The Coding Train” on YouTube helped me on the beginnings. I started my coding while supporting myself with the information on specific references and libraries on p5js.org website.
+            For a foundation, I embedded one song and created the first shape based on FFT function of the library, which analyze the frequency of the sound and returns an array.
+            The first shape is using the analyze(), which allowed me to work with the array of amplitude values between 100 and 250. Using sine and cosine wave as per one of the tutorials watched on YouTube I created a round shape using an equation to make a generic wave visualizer. 
+            
+            <br> <br>
+
+            I then moved on to the image I used the image() to show the image I made it so that it takes it from an array in the preload function. Then I tested it so that the images change and revert when Amp of the music. I also tested this effect on the on the colors of the visualizers and later on the particles. I wanted to make the image increase size without changing the height and width when the Amp is above 200 however this proved to be a problem and so I settled on making the image rotate back and forth from -0.5 to 0.5. I added a black fill on top of the image and gave it a opacity that changes according to the Amp 
+            When Making the particles is used and tweaked a file from the space invaders. One of the tweaks is using p5.Vector.random2d().mult(); this multiplies the vector by the amount in this case I used 50 this creates the circle in which the particle starts at. And I used copy() which copies the vector and again used the mult() on starting acceleration but it is multiplied by a random number between 0.0001 and 0.00001.  I felt like something is still missing from the created visualization. I have decided to use one of the features I found in one of the examples founded in my inspirations. I made it so that the next two visuals based on the demo 2 and demo 3 from my inspirations. 
+            At this point I was happy with my progress and I want to start on interactions I first start with making key pressed function for the songs the is preloaded. The keys started off with 1 – 4 to demonstrate and see is the previous functions like images and colour will work due to the different amp ranges each song have. 
+            <br>
+            Then I started making it so the song doesn’t overlap and able to pause and continue a song. Then I made buttons in order for interactions for touchscreen and mouse this acts much like the keys. 
+            Then I studied more in to p5 GUI in order to add a volume array and implement it in on the music. In order for this to work I used getVolume(); this allowed me to alter the volume of the music but for the project instead of hard coding a volume I made it so its connected to the params of the GUI.
+            As Overall, I think this project went well, quick, fun and tough project to make. I had to reduce the amount of feature to add on the project for two reasons and these are:
+
+        </p>
+
+        <ul>
+            <li>
+                
+            -	1. Because of the days given for the project, report, video and website along with another CA, I was forced to reduce the features to make time this is even with the time I’ve received before the break.
+            
+            </li>
+            <li>
+               
+            -	2. Some features were troublesome especially when trying to add and alter effects of the music as an example I wanted to add a feature to increase the bass of the music however this needed me to learn EQ from the sound library but I don’t have the time.
+            </li>
+        </ul>
+
+        <p>
+            If I had more time, I would like to add more features to the project, for example, letting the user choose between import music or connect external audio source like Spotify to it and let the user actually choose any song he wants it would be really beneficial for the overall project.
+        </p>
+            
+            
+        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!---------- PPROJECT ---------->
+
+    
+
+    <!---------- CONTACTS ---------->
+
+    <div class="contacts">
+      <h2>Get In Touch</h2>
+
+      <p>
+        Although I’m not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+      </p>
+
+      <div class="button">
+      <a href="mailto:dasalkenji@gmail.com" rel="noopener noreferrer" target="_blank">
+         Message Me!
+        </a>
+      </div>
+    </div>
+
+    <!---------- FOOTER ---------->
+
+    <div class="footer">
+      <div class="icons">
+        <ul>
+        <li>
+          <a href="">
+            <i class="fa fa-instagram"></i> 
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-facebook"></i> 
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-github"></i> 
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-twitter"></i> 
+          </a>
+        </li>
+      </ul>
+      </div>
+    </div>
+
+
+    <!---------- SCRIPTS ---------->
+
+</body>
+</html>
