@@ -488,13 +488,13 @@ p{
 
 h1 .max-width{
     margin: auto 0 auto 40px;
-    
 }
 
 .home-ca h1{
     padding-top: 8.3rem;
     max-width: 1300px;
     margin-left: auto;
+    
 }
 .home-ca h1 .text1{
     font-size: 3.3rem;
@@ -526,6 +526,35 @@ h1 .max-width{
     font-size: 3.3rem;
     color: crimson;
    }
+.home-ca-about{
+    margin: 3rem;
+}
+
+.home-ca-about h1{
+    color: crimson;
+    padding: 3rem;
+}
+
+.home-ca-about p{
+    font-size: 2rem;
+    line-height: 2.3rem;
+}
+
+.home-ca-about ul{
+    margin: 3rem;
+}
+
+.home-ca-about ul li{
+    color: red;
+    list-style: none;
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.home-ca-about ul li a{
+    color: crimson;
+    text-decoration: none;
+}
 
 /* ---------- LABS HOMEPAGE ---------- */
 
