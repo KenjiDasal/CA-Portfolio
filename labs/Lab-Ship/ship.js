@@ -5,8 +5,10 @@ class Ship {
 	this.vx = vx;
 	this.vy = vy;
 	this.rotation = rotation;
+	console.log(rotation);
 	this.showFlame = showFlame;
-}
+	this.vel = createVector(vx, vy);
+	}
 
 	drawShip()
 	{
@@ -23,7 +25,7 @@ class Ship {
 		vertex(10, 0);
 		endShape();
  
-		if (this.showFlame) {
+		if (this.showFlame == true) {
 		beginShape();
 		vertex(-7.5, -5);
 		vertex(-15, 0);
@@ -45,12 +47,5 @@ class Ship {
 	{
 		this.x = this.x + this.vx;
 		this.y = this.y + this.vy;
-
-		if(this.x < 0 || this.x > 1000){
-			this.vx = -this.vx;
-		}
-		if (this.y < 0 || this.y > 1000){
-			this.vy = -this.vy;
-		}
 	}
 }
