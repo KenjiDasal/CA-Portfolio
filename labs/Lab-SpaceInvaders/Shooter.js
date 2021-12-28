@@ -1,7 +1,8 @@
 class Shooter{
     constructor(x,y){
         this.pos = createVector(x,y);
-        this.direction = 0;
+        this.direction = 1;
+        this.barrelAngle = -PI / 2;
     }
     render() {
         push();
@@ -9,6 +10,13 @@ class Shooter{
         fill(0,0,255);
         rectMode(CENTER);
         rect(0, 0, shooterWidth, shooterHeight); 
+
+        rotate(this.barrelAngle)
+        rectMode(CORNER);
+        fill(0,255,255);
+        noStroke();
+        rect(-5, -5, 40, 10);
+        
         pop();
     }
 

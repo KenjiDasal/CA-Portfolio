@@ -1,7 +1,8 @@
 class Bullet{
-    constructor(x,y){
+    constructor(x, y, a){
         this.pos = createVector(x,y);
         this.velocity = bulletVelocity;
+        this.angle = a;
     }
     render() {
         push();
@@ -12,7 +13,8 @@ class Bullet{
     }
 
     move(){
-        this.pos.y -= this.velocity;
+        this.pos.x += Math.cos(this.angle)*bulletVelocity;
+        this.pos.y += Math.sin(this.angle)*bulletVelocity;
     }
     shift(){
         this.pos.y += shiftDown;
@@ -21,7 +23,7 @@ class Bullet{
     
     hits(alien){
         let distance = (p5.Vector.sub(this.pos, alien.pos)).mag();
-        if(distance < 30){
+        if(distance < bulletHeight + alienHeight){
             return true;
         }else{
             return false;
