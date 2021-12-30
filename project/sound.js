@@ -244,8 +244,9 @@ function draw() {
     push();
       beginShape();
       for (i = 0; i < 180; i++) { // 180 is number of dots going around
+        index = floor(map(i, 0, 180, 0, wave.length - 1))
         var r = map(spectrum[i], 0, 180 , 150+treble, 200+treble);
-        var x = r * -sin(i) * t;
+        var x = r * sin(i) * t;
         var y = r * cos(i);
         strokeWeight(4);
         point(x, y); //this will onlyp displays dots
@@ -262,9 +263,7 @@ function draw() {
     strokeWeight(5);
     arc(0, 0, 25, 25, 100, -50);
     if(amp > 200){//when the amp goes over 200 the speed of the rotors increases but slows down when bellow
-        if(mid > 100){
             angle += 5;
-        }
         }
     angle+=1;
     pop();
@@ -276,9 +275,7 @@ function draw() {
     strokeWeight(5);
     arc(0, 0, 50, 50, 100, -50);
     if(amp > 200){
-    if(mid > 100){
         angle2 -= 3;
-    }
     }
     angle2 -=1;
     pop();
@@ -290,9 +287,7 @@ function draw() {
     strokeWeight(10);
     arc(0, 0, 75, 75, -150, 0);
     if(amp > 200){
-        if(mid > 100){
             angle3 += 4;
-        }
         }
     angle3 +=1;
     pop();
