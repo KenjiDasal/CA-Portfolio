@@ -1,6 +1,6 @@
 class Particle{
     constructor(){
-        this.pos = p5.Vector.random2D().mult(50);
+        this.pos = p5.Vector.random2D().mult(150);
         this.speed = createVector(0,0);
         this.start = this.pos.copy().mult(random(0.0001, 0.00001));
         this.w = random(3,5);
